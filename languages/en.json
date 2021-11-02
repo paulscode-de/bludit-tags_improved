@@ -2,6 +2,6 @@
 	"plugin-data":
 	{
 		"name": "Improved tag list",
-		"description": "Implements a simple tag cloud."
+		"description": "Implements a simple tag cloud where you can define your own classes to use for styling."
 	}
 }
