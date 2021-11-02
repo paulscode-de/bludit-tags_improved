@@ -88,7 +88,7 @@ class pluginTagsPlus extends Plugin {
         $filter = $url->filters('tag');
 
         $html = '<div class="plugin plugin-tags">';
-        $html .= '<h2 class="plugin-label">' . $this->getValue('label') . '</h2>';
+        $html .= '<h2 class="plugin-label">' . htmlentities($this->getValue('label')) . '</h2>';
         $html .= '<div class="plugin-content">';
         $html .= '<ul class="tags">';
 
@@ -112,10 +112,10 @@ class pluginTagsPlus extends Plugin {
                 $classToUse = $this->getValue('tags-0-class');
             }
 
-            $html .= '<li class="' . $classToUse . '" ">';
+            $html .= '<li class="' . htmlentities($classToUse) . '" ">';
 
-            $html .= '<a href="' . DOMAIN_TAGS . $key . '">';
-            $html .= $fields['name'];
+            $html .= '<a href="' . DOMAIN_TAGS . htmlentities($key) . '">';
+            $html .= htmlentities($fields['name']);
             $html .= '</a>';
             $html .= '</li>';
         }
